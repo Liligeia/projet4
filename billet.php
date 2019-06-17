@@ -1,23 +1,27 @@
 <?php
 
-require 'Modele.php';
+require_once 'Modele/Modele.php';
 
-try {
-  if (isset($_GET['id'])) {
-    // intval renvoie la valeur numérique du paramètre ou 0 en cas d'échec
-    $id = intval($_GET['id']);
-    if ($id != 0) {
-      $billet = getBillet($id);
-      $commentaires = getCommentaires($id);
-      require 'vueBillet.php';
-    }
-    else
-      throw new Exception("Identifiant de billet incorrect");
+class Billet extends Modele {
+
+  // Renvoie la liste des billets du blog
+  public function getBillets() {
+    $sql = 'select BIL_ID as id, BIL_DATE as date,'
+      . ' BIL_TITRE as titre, BIL_CONTENU as contenu from T_BILLET'
+      . ' order by BIL_ID desc';
+    $billets = $this->executerRequete($sql);
+    return $billets;
   }
-  else
-    throw new Exception("Aucun identifiant de billet");
-}
-catch (Exception $e) {
-  $msgErreur = $e->getMessage();
-  require 'vueErreur.php';
+
+  // Renvoie les informations sur un billet
+  public function getBillet($idBillet) {
+    $sql = 'select BIL_ID as id, BIL_DATE as date,'
+      . ' BIL_TITRE as titre, BIL_CONTENU as contenu from T_BILLET'
+      . ' where BIL_ID=?';
+    $billet = $this->executerRequete($sql, array($idBillet));
+    if ($billet->rowCount() == 1)
+      return $billet->fetch();  // Accès à la première ligne de résultat
+    else
+      throw new Exception("Aucun billet ne correspond à l'identifiant '$idBillet'");
+    }
 }
