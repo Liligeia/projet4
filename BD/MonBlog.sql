@@ -1,7 +1,7 @@
 /* Testé sous MySQL 5.x */
 
-drop table if exists T_COMMENTAIRE;
-drop table if exists T_BILLET;
+drop table if exists T_COMMENTAIRE cascade;
+drop table if exists T_BILLET cascade;
 
 create table T_BILLET (
   BIL_ID integer primary key auto_increment,
