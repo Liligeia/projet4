@@ -14,15 +14,21 @@ class Vue {
     $this->fichier = $fichier . $action . ".php";
   }
     // Génère et affiche la vue
-    public function generer($donnees) {
-        // Génération de la partie spécifique de la vue
-        $contenu = $this->genererFichier($this->fichier, $donnees);
-        // Génération du gabarit commun utilisant la partie spécifique
-        $vue = $this->genererFichier('Vue/gabarit.php',
-                array('titre' => $this->titre, 'contenu' => $contenu));
-        // Renvoi de la vue au navigateur
-        echo $vue;
-    }
+      public function generer($donnees) {
+    // Génération de la partie spécifique de la vue
+    $contenu = $this->genererFichier($this->fichier, $donnees);
+    // On définit une variable locale accessible par la vue pour la racine Web
+    // Il s'agit du chemin vers le site sur le serveur Web
+    // Nécessaire pour les URI de type controleur/action/id
+    $racineWeb = Configuration::get("racineWeb", "/");
+    // Génération du gabarit commun utilisant la partie spécifique
+    $vue = $this->genererFichier('Vue/gabarit.php',
+      array('titre' => $this->titre, 'contenu' => $contenu,
+            'racineWeb' => $racineWeb));
+    // Renvoi de la vue générée au navigateur
+    echo $vue;
+  }
+  }
     // Génère un fichier vue et renvoie le résultat produit
     private function genererFichier($fichier, $donnees) {
         if (file_exists($fichier)) {
