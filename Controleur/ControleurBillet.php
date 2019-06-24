@@ -1,10 +1,10 @@
 <?php
 
+require_once 'Framework/Controleur.php';
 require_once 'Modele/Billet.php';
 require_once 'Modele/Commentaire.php';
-require_once 'Vue/Vue.php';
 
-class ControleurBillet {
+class ControleurBillet extends Controleur {
 
   private $billet;
   private $commentaire;
@@ -15,18 +15,25 @@ class ControleurBillet {
   }
 
   // Affiche les détails sur un billet
-  public function billet($idBillet) {
+  public function index() {
+    $idBillet = $this->requete->getParametre("id");
+        
     $billet = $this->billet->getBillet($idBillet);
     $commentaires = $this->commentaire->getCommentaires($idBillet);
-    $vue = new Vue("Billet");
-    $vue->generer(array('billet' => $billet, 'commentaires' => $commentaires));
+        
+    $this->genererVue(array('billet' => $billet, 
+      'commentaires' => $commentaires));
   }
-    // Ajoute un commentaire à un billet
-  public function commenter($auteur, $contenu, $idBillet) {
-    // Sauvegarde du commentaire
-    $this->commentaire->ajouterCommentaire($auteur, $contenu, $idBillet); 
-    // Actualisation de l'affichage du billet
-    $this->billet($idBillet);
+
+  // Ajoute un commentaire sur un billet
+  public function commenter() {
+    $idBillet = $this->requete->getParametre("id");
+    $auteur = $this->requete->getParametre("auteur");
+    $contenu = $this->requete->getParametre("contenu");
+        
+    $this->commentaire->ajouterCommentaire($auteur, $contenu, $idBillet);
+        
+    // Exécution de l'action par défaut pour actualiser la liste des billets
+    $this->executerAction("index");
   }
-  
 }
