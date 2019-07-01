@@ -1,23 +1,39 @@
 <!doctype html>
 <html lang="fr">
+
   <head>
     <meta charset="UTF-8" />
 	<base href="<?= $racineWeb ?>" >
     <link rel="stylesheet" href="Contenu/style.css" />
-    <title><?= $titre ?></title>   <!-- Élément spécifique -->
+    <title><?= $titre ?></title>
   </head>
+  
   <body>
     <div id="global">
+	
+	<!-- Header -->
       <header>
-        <a href="index.php"><h1 id="titreBlog">Mon Blog</h1></a>
-        <p>Je vous souhaite la bienvenue sur ce modeste blog.</p>
+		<!--Titre-->
+        <a href="index.php"><h1 id="titreBlog">Jean Forteroche</h1></a>
+		<!-- Menu -->
+		<nav id="menu">
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Chapitres</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
       </header>
+	  
+	<!-- Contenu -->
       <div id="contenu">
-        <?= $contenu ?>   <!-- Élément spécifique -->
+        <?= $contenu ?>
       </div>
+	  
+	<!-- Footer -->
       <footer id="piedBlog">
         Blog réalisé avec PHP, HTML5 et CSS.
       </footer>
-    </div> <!-- #global -->
+    </div>
   </body>
 </html>
