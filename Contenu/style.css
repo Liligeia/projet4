@@ -8,10 +8,12 @@ html, body {
 }
 
 body {
-    font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
+	background: #eaeaea;
+    font-family: 'Roboto','Modernsans','Geosans','Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
 }
 
 #global {
+	background: #FFFFFF;
     min-height: 100%;
     width: 70%;
     margin: auto;    /* Permet de centrer la div */
@@ -31,13 +33,17 @@ a{
 #titreBlog, #piedBlog {
     text-align: center;
 }
+h1 {
+    color: #2c2c2c;
+}
 
               /*********/
              /* Header*/
             /*********/
 
-h1 {
-    color: #5d5d5d;
+#titreBlog{
+	font-family: 'Olivia', 'Wyntex', 'Thuressia';
+	font-size: 3em;
 }
 
 #menu ul{
@@ -57,19 +63,32 @@ h1 {
 
 #slide{
 	width: 100%;
+	margin: 5% 0;
 }
 #slide figure, #slide figure img {
+	position: relative;
     width: 100%;
     margin: 0 auto;
 }
 #slide figcaption{
 	position : absolute;
 	color: white;
-	background: rgba(0,0,0,0.5);
+	background: rgba(255,255,255,0.3);
 	border-radius: 5px;
-	top: 25%;
-	margin-left: 25%;
+	top: 40%;
+	margin-left: 35%;
 	padding: 0px 20px;
+}
+
+              /***********/
+             /* Articles*/
+            /***********/
+#piedBlog{
+	position: absolute;
+	bottom: 0;
+    left: 0;
+    right: 0;
+
 }
 
               /***********/
@@ -87,4 +106,37 @@ h1 {
 
 #txtCommentaire {
     width: 50%;
+	font-family: sans-serif;
+}
+
+
+              /**********/
+             /* Polices*/
+            /**********/
+
+
+@font-face{
+	font-family: 'Olivia';
+	src: url(../Fonts/Olivia_Dhorgent.ttf);
+}
+@font-family{
+	font-family: 'Wyntex';
+	src: url(../Fonts/Wyntex_Brasco.ttf);
+}
+@font-face{
+	font-family: 'Thuressia';
+	src: url(../Fonts/Thuressia.ttf),
+		 url(../Fonts/Thuressia.otf);
+}
+@font-face{
+	font-family: 'Geosans';
+	src: url(../Fonts/GeosansLight.ttf);
+}
+@font-face{
+	font-family: 'Roboto';
+	src: url(../Fonts/Roboto-Light.ttf);
+}
+@font-face{
+	font-family: 'Modernsans';
+	src: url(../Fonts/ModernSans-Light.otf);
 }
