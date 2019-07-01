@@ -73,22 +73,18 @@ h1 {
 #slide figcaption{
 	position : absolute;
 	color: white;
-	background: rgba(255,255,255,0.3);
+	background: rgba(0,0,0,0.3);
 	border-radius: 5px;
 	top: 40%;
 	margin-left: 35%;
 	padding: 0px 20px;
 }
 
-              /***********/
-             /* Articles*/
-            /***********/
+              /*********/
+             /* Footer*/
+            /*********/
 #piedBlog{
-	position: absolute;
-	bottom: 0;
-    left: 0;
-    right: 0;
-
+	margin-top: 10%;
 }
 
               /***********/
@@ -97,8 +93,24 @@ h1 {
 
 
 .titreBillet {
-    margin-bottom : 0px;
+    margin-bottom : 8px;
 }
+
+time{
+	font-size: 0.9em;
+}
+
+#auteur {
+	margin: 10px 0;
+}
+
+#submitCom{
+	background: #dcdcdc;
+	border-radius: 4px;
+	margin-top: 10px;
+}
+
+/**** Commentaires ****/
 
 #titreReponses {
     font-size : 100%;
@@ -108,7 +120,6 @@ h1 {
     width: 50%;
 	font-family: sans-serif;
 }
-
 
               /**********/
              /* Polices*/
