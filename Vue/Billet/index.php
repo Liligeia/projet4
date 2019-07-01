@@ -22,5 +22,5 @@
     <textarea id="txtCommentaire" name="contenu" rows="4" 
               maxlength="280" placeholder="Votre commentaire" required></textarea><br />
     <input type="hidden" name="id" value="<?= $billet['id'] ?>" />
-    <input type="submit" value="Commenter" />
+    <input id="submitCom" type="submit" value="Commenter" />
 </form>
