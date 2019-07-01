@@ -17,10 +17,10 @@
 <?php endforeach; ?>
 <hr />
 <form id="formCom" method="post" action="billet/commenter">
-    <input id="auteur" name="auteur" type="text" placeholder="Votre pseudo" 
+    <input id="auteur" name="auteur" type="text" maxlength="20" placeholder="Votre pseudo" 
            required /><br />
     <textarea id="txtCommentaire" name="contenu" rows="4" 
-              placeholder="Votre commentaire" required></textarea><br />
+              maxlength="280" placeholder="Votre commentaire" required></textarea><br />
     <input type="hidden" name="id" value="<?= $billet['id'] ?>" />
     <input type="submit" value="Commenter" />
 </form>
