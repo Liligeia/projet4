@@ -1,4 +1,4 @@
-<?php $this->titre = "Mon Blog"; ?>
+<?php $this->titre = "Jean Forteroche"; ?>
 
 <?php foreach ($billets as $billet):
     ?>
