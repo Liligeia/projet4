@@ -9,7 +9,7 @@
 </article>
 <hr />
 <header>
-    <h1 id="titreReponses">Réponses à <?= $this->nettoyer($billet['titre']) ?></h1>
+    <h1 id="titreReponses">Commentaires</h1>
 </header>
 <?php foreach ($commentaires as $commentaire): ?>
     <p><?= $this->nettoyer($commentaire['auteur']) ?> dit :</p>
