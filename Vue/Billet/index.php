@@ -16,7 +16,7 @@
     <p><?= $this->nettoyer($commentaire['contenu']) ?></p>
 <?php endforeach; ?>
 <hr />
-<form method="post" action="billet/commenter">
+<form id="formCom" method="post" action="billet/commenter">
     <input id="auteur" name="auteur" type="text" placeholder="Votre pseudo" 
            required /><br />
     <textarea id="txtCommentaire" name="contenu" rows="4" 
