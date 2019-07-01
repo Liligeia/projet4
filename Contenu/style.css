@@ -104,22 +104,24 @@ time{
 	margin: 10px 0;
 }
 
+/**** Commentaires ****/
+
+#titreReponses {
+    font-size : 100%;
+}
+#txtCommentaire {
+    max-width: 500px; /* Délimite la zone de l'espace commentaire */
+    min-width: 500px;
+    max-height: 100px;
+    min-height: 100px;
+	font-family: sans-serif;
+}
 #submitCom{
 	background: #dcdcdc;
 	border-radius: 4px;
 	margin-top: 10px;
 }
 
-/**** Commentaires ****/
-
-#titreReponses {
-    font-size : 100%;
-}
-
-#txtCommentaire {
-    width: 50%;
-	font-family: sans-serif;
-}
 
               /**********/
              /* Polices*/
