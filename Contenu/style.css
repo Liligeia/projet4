@@ -1,24 +1,18 @@
+              /*********/
+             /* Global*/
+            /*********/
+
+
 html, body {
     height: 100%;
 }
 
 body {
-    color: #bfbfbf;
-    background: black;
     font-family: 'Futura-Medium', 'Futura', 'Trebuchet MS', sans-serif;
 }
 
-h1 {
-    color: white;
-}
-
-.titreBillet {
-    margin-bottom : 0px;
-}
-
 #global {
-    min-height: 100%;  /* Voir commentaire sur html et body plus haut */
-    background: #333534;
+    min-height: 100%;
     width: 70%;
     margin: auto;    /* Permet de centrer la div */
     text-align: justify;
@@ -29,8 +23,45 @@ h1 {
     margin-bottom : 30px;
 }
 
+a{
+	text-decoration: none;
+	color: #2e2e2e;
+}
+
 #titreBlog, #piedBlog {
     text-align: center;
+}
+
+              /*********/
+             /* Header*/
+            /*********/
+
+h1 {
+    color: #5d5d5d;
+}
+
+#menu ul{
+    display: flex;
+    flex-direction: row;
+	justify-content: center;
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+#menu li{
+    font-size: 1.5em;
+    width: auto;
+    margin: 0px;
+    padding: 0 50px;
+}
+
+              /***********/
+             /* Articles*/
+            /***********/
+
+
+.titreBillet {
+    margin-bottom : 0px;
 }
 
 #titreReponses {

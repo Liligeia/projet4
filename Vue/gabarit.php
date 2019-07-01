@@ -23,6 +23,15 @@
                 <li><a href="#">Contact</a></li>
             </ul>
         </nav>
+		<!-- Slide -->
+		<div id= slide>
+			<figure>
+            <img src="Images/slide.jpg" alt="Slide"/>
+				<figcaption>                
+                <h2>Billet simple pour l'Alaska</h2>
+				</figcaption>
+			</figure> 
+		</div>
       </header>
 	  
 	<!-- Contenu -->
