@@ -34,14 +34,17 @@
 		</div>
       </header>
 	  
-	<!-- Contenu -->
+	<!-- Chapitres -->
       <div id="contenu">
         <?= $contenu ?>
       </div>
 	  
 	<!-- Footer -->
       <footer id="piedBlog">
-        Blog réalisé avec PHP, HTML5 et CSS.
+        <div id="socialmedia">
+		</div>
+		<div id="connexion">
+		</div>
       </footer>
     </div>
   </body>
