@@ -102,6 +102,10 @@ padding: 0;
 	padding: 0 10px;
 }
 
+#connexion{
+	margin: 3%;
+}
+
               /***********/
              /* Articles*/
             /***********/
@@ -136,7 +140,15 @@ time{
 	border-radius: 4px;
 	margin-top: 10px;
 }
-
+              /********/
+             /* Admin*/
+            /********/
+			
+/**** Connexion ****/
+#formConect{
+	text-align: center;
+	margin: 12%;
+}
 
               /**********/
              /* Polices*/
