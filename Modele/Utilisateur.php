@@ -35,3 +35,4 @@ class Utilisateur extends Modele {
         else
             throw new Exception("Aucun utilisateur ne correspond aux identifiants fournis");
     }
+}
