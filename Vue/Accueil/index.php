@@ -1,5 +1,15 @@
 <?php $this->titre = "Jean Forteroche"; ?>
 
+		<div id= slide>
+			<figure>
+            <img src="Images/slide.jpg" alt="Slide"/>
+				<figcaption>                
+                <h2>Billet simple pour l'Alaska</h2>
+				</figcaption>
+			</figure> 
+		</div>
+
+
 <?php foreach ($billets as $billet):
     ?>
     <article>
