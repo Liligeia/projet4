@@ -6,8 +6,12 @@
 	<base href="<?= $racineWeb ?>" >
     <link rel="stylesheet" href="Contenu/style.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-	<script src="https://cdn.tiny.cloud/1/qd53a38o7acwmk9l0fwazlqtmml29z2e980gpr4j31s7q0hv/tinymce/5/tinymce.min.js"></script> 
-	<script>tinymce.init({ selector: #mytextarea });</script>
+	<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+	<script type="text/javascript">
+		tinymce.init({
+		selector: '#mytextarea'
+		});
+  </script>
     <title><?= $titre ?></title>
   </head>
   
