@@ -21,10 +21,12 @@ class ControleurConnexion extends Controleur
         if ($this->requete->existeParametre("login") && $this->requete->existeParametre("mdp")) {
             $login = $this->requete->getParametre("login");
             $mdp = $this->requete->getParametre("mdp");
+			define ("PREFIXE","sd4g65q4r65g");
+			define ("SUFFIXE","sfq4ez66f54s");
             if ($this->utilisateur->connecter($login, $mdp)) {
                 $utilisateur = $this->utilisateur->getUtilisateur($login, $mdp);
                 $this->requete->getSession()->setAttribut("idUtilisateur",
-                        $utilisateur['idUtilisateur']);
+                        PREFIXE.hash("sha256",$utilisateur['idUtilisateur']).SUFFIXE);
                 $this->requete->getSession()->setAttribut("login",
                         $utilisateur['login']);
                 $this->rediriger("admin");
