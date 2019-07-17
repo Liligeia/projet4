@@ -61,6 +61,8 @@ h1 {
     padding: 0 50px;
 }
 
+/****Slide*****/
+
 #slide{
 	width: 100%;
 	margin: 5% 0;
@@ -145,7 +147,7 @@ time{
             /********/
 			
 /**** Connexion ****/
-#formConect{
+#formConnect{
 	text-align: center;
 	margin: 12%;
 }
