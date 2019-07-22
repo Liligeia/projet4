@@ -152,6 +152,23 @@ time{
 	margin: 12%;
 }
 
+/**** Création de chapitres ****/
+#formChap{
+	background-color: #f1f1f1;
+}
+#titleChapter{
+	margin: 15px;
+	padding: 5px;
+}
+div.tox.tox-tinymce{
+	margin: 15px;
+}
+#submitChap{
+	margin: 15px;
+	background: #dcdcdc;
+    border-radius: 4px;
+}
+
               /**********/
              /* Polices*/
             /**********/
