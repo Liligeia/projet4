@@ -11,7 +11,7 @@ Ce blog comporte <?= $this->nettoyer($nbBillets) ?> billet(s) et <?= $this->nett
 
   <form id="formChap" method="post" action="admin/publier>
 	<input type="text" id="titleChapter" name="titre" placeholder="Titre du chapitre"/>
-    <textarea id="mytextarea"></textarea>
+    <textarea id="mytextarea" name="contenu"></textarea>
 	<input type="submit" id="submitChap" value="Publier"/>
   </form>
   
