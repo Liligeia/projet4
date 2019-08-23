@@ -36,6 +36,3 @@ insert into T_COMMENTAIRE(COM_DATE, COM_AUTEUR, COM_CONTENU, BIL_ID) values
 (NOW(), 'A. Nonyme', 'Bravo pour ce début', 1);
 insert into T_COMMENTAIRE(COM_DATE, COM_AUTEUR, COM_CONTENU, BIL_ID) values
 (NOW(), 'Moi', 'Merci ! Je vais continuer sur ma lancée', 1);
-
-insert into T_UTILISATEUR(UTIL_LOGIN, UTIL_MDP) values
-('admin', 'secret');
