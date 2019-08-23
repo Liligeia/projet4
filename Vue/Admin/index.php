@@ -9,7 +9,7 @@ Ce blog comporte <?= $this->nettoyer($nbBillets) ?> billet(s) et <?= $this->nett
 
 <h4> Créer un nouveau chapitre :</h4>
 
-  <form id="formChap" method="post" action="admin/publier>
+  <form id="formChap" method="post" action="admin/publier">
 	<input type="text" id="titleChapter" name="titre" placeholder="Titre du chapitre"/>
     <textarea id="mytextarea" name="contenu"></textarea>
 	<input type="submit" id="submitChap" value="Publier"/>
