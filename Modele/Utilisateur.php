@@ -3,20 +3,33 @@ require_once 'Framework/Modele.php';
 /**
  * Modélise un utilisateur du blog
  */
-class Utilisateur extends Modele {
-    /**
+class Utilisateur extends Modele 
+{
+	private $_login;
+	 
+	 /**
      * Vérifie qu'un utilisateur existe dans la BD
      * 
      * @param string $login Le login
-     * @param string $mdp Le mot de passe
-     * @return boolean Vrai si l'utilisateur existe, faux sinon
+     * @return renvoie le contenu de la requete
      */
-    public function connecter($login, $mdp)
-    {
-        $sql = "select UTIL_ID from T_UTILISATEUR where UTIL_LOGIN=? and UTIL_MDP=?";
-        $utilisateur = $this->executerRequete($sql, array($login, $mdp));
-        return ($utilisateur->rowCount() == 1);
+	public function verifyRequete($login){
+		$sql = "select UTIL_MDP from T_UTILISATEUR where UTIL_LOGIN=?";
+		$resultatRequete = $this->executerRequete($sql, array($login));
+		$contenuRequete = $resultatRequete->fetch();
+		return $contenuRequete;
     }
+	
+	public function setLogin($login){
+		$this->_login = $login;
+	}
+	
+	public function getLogin(){
+		return $_login;		
+	}
+	
+	
+	
     /**
      * Renvoie un utilisateur existant dans la BD
      * 
