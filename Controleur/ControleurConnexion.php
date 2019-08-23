@@ -16,27 +16,44 @@ class ControleurConnexion extends Controleur
     {
         $this->genererVue();
     }
-    public function connecter()
+    
+	//Vérifie le mot de passe hashé dans la BDD avec le password_verify
+	public function verify($login, $mdp){
+		$contenuRequete = $this->utilisateur->verifyRequete($login);
+		$resultat = false;
+			if ($contenuRequete && password_verify($mdp,$contenuRequete['UTIL_MDP'])){
+			
+			$resultat = true;
+			}else{
+			$resulat = false;
+			}
+		return $resultat;
+
+    }	
+	
+	//Vérifie les identifiants rentrer par l'utilisateur pour se connecter 
+	public function connecter()
     {
         if ($this->requete->existeParametre("login") && $this->requete->existeParametre("mdp")) {
             $login = $this->requete->getParametre("login");
             $mdp = $this->requete->getParametre("mdp");
-			define ("PREFIXE","sd4g65q4r65g");
-			define ("SUFFIXE","sfq4ez66f54s");
-            if ($this->utilisateur->connecter($login, $mdp)) {
-                $utilisateur = $this->utilisateur->getUtilisateur($login, $mdp);
-                $this->requete->getSession()->setAttribut("idUtilisateur",
-                        PREFIXE.hash("sha256",$utilisateur['idUtilisateur']).SUFFIXE);
-                $this->requete->getSession()->setAttribut("login",
-                        $utilisateur['login']);
-                $this->rediriger("admin");
-            }
-            else
-                $this->genererVue(array('msgErreur' => 'Login ou mot de passe incorrects'),
-                        "index");
+				if ($this->verify($login, $mdp)) {
+					$this->utilisateur->setLogin($login);
+					
+					$this->requete->getSession()->setAttribut("login",
+							$login);
+					$this->rediriger("admin");
+				
+				}	
+				else{
+				$this->genererVue(array('msgErreur' => 'Login ou mot de passe incorrects'),
+				"index");
+				}
+			
         }
-        else
+        else{
             throw new Exception("Action impossible : login ou mot de passe non défini");
+		}	
     }
     public function deconnecter()
     {
