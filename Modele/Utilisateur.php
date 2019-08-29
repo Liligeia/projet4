@@ -13,7 +13,7 @@ class Utilisateur extends Modele
      * @param string $login Le login
      * @return renvoie le contenu de la requete
      */
-	public function verifyRequete($login){
+	public function getUserPassword($login){
 		$sql = "select UTIL_MDP from T_UTILISATEUR where UTIL_LOGIN=?";
 		$resultatRequete = $this->executerRequete($sql, array($login));
 		$contenuRequete = $resultatRequete->fetch();
@@ -27,8 +27,6 @@ class Utilisateur extends Modele
 	public function getLogin(){
 		return $_login;		
 	}
-	
-	
 	
     /**
      * Renvoie un utilisateur existant dans la BD
