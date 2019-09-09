@@ -4,14 +4,17 @@
   <head>
     <meta charset="UTF-8" />
 	<base href="<?= $racineWeb ?>" >
+	<!--Stylesheet-->
     <link rel="stylesheet" href="Contenu/style.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
+	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<!--TinyMCE-->
 	<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 	<script type="text/javascript">
 		tinymce.init({
 		selector: '#mytextarea'
 		});
-  </script>
+	</script>
     <title><?= $titre ?></title>
   </head>
   
