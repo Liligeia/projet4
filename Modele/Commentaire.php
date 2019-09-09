@@ -13,6 +13,20 @@ class Commentaire extends Modele {
         $commentaires = $this->executerRequete($sql, array($idBillet));
         return $commentaires;
     }
+	
+    /** 
+	 * Renvoie la liste des commentaires du blog
+     * 
+     * @return PDOStatement La liste des commentaires
+     */
+	public function getListCommentaires(){
+		$sql = 'select COM_ID as id, COM_DATE as date,'
+                . ' COM_AUTEUR as auteur, COM_CONTENU as contenu from T_COMMENTAIRE'
+                . ' order by COM_ID desc';
+		$commentaires = $this->executerRequete($sql);
+        return $commentaires;
+	}
+	/*Ajoute un commentaire */
     public function ajouterCommentaire($auteur, $contenu, $idBillet) {
         $sql = 'insert into T_COMMENTAIRE(COM_DATE, COM_AUTEUR, COM_CONTENU, BIL_ID)'
             . ' values(?, ?, ?, ?)';
