@@ -18,5 +18,13 @@ class ControleurEditcommentaires extends ControleurSecurise
     $commentaires = $this->commentaire->getListCommentaires();
     $this->genererVue(array('commentaires' => $commentaires));
   }
+  
+  public function supprimer(){
+	$idCommentaire = $this->requete->getParametre("id");
+	  
+	$this->commentaire->supprimerCommentaire($idCommentaire);
+	  
+	$this->executerAction("index");
+  }
 	
 }
