@@ -1,23 +1,36 @@
-<?php $this->titre = "Administration" ?>
+<?php $this->titre = "Administration"; ?>
 
 <h2>Administration</h2>
 
-Bienvenue, <?= $this->nettoyer($login) ?> !
-Ce blog comporte <?= $this->nettoyer($nbBillets) ?> billet(s) et <?= $this->nettoyer($nbCommentaires) ?> commentaire(s).
-<br>
+<div id="menuAdmin">
+	<a href="admin" > <button type="button" class="buttonMenu">Article(s)</button></a>
+	<a href="editcommentaires" > <button type="button" class="buttonMenu">Commentaire(s)</button></a>
+</div>
 
+<h3> Vos chapitres :</h3>
 
-<h4> Créer un nouveau chapitre :</h4>
+<?php foreach ($billets as $billet):
+    ?>
+    <article>
+        <header>
+			<div class="liste">
+				<a href="<?= "billet/index/" . $this->nettoyer($billet['id']) ?>">
+					<h4 class="titreBillet"><?= $this->nettoyer($billet['titre']) ?></h4>
+				</a>
+				<div>
+					<!--Modifier-->
+					<form method="post" action="">
+						<button type="button" class="buttonEdit"><i class="fas fa-pencil-alt"></i></button>
+					</form>
+					<!--Supprimer-->
+					<form method="post" action="admin/supprimer">
+						<button type="button" class="buttonDelete"><i class="fas fa-times"></i></button>
+					</form>	
+				</div>
+			</div>
+        </header>
+    </article>
+    <hr />
+<?php endforeach; ?>
 
-  <form id="formChap" method="post" action="admin/publier">
-	<input type="text" id="titleChapter" name="titre" placeholder="Titre du chapitre"/>
-    <textarea id="mytextarea" name="contenu"></textarea>
-	<input type="submit" id="submitChap" value="Publier"/>
-  </form>
-  
-<h4>Modifier un chapitre :</h4>
-
-<h4>"NOMBRE" commentaire(s) signalé(s) :</h4>  
-
-
-<a id="lienDeco" href="connexion/deconnecter">Se déconnecter</a>
+<a href="newbillet" ><button type="button" class="buttonsub">+ Créer chapitre</button></a>
