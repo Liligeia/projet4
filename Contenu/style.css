@@ -178,6 +178,10 @@ time{
 	display: flex;
     justify-content: space-between;
 }
+#editChap{
+	display: flex;
+    margin-top: 25px;
+}
 
 .buttonEdit{
 	background: none;
