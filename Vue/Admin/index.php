@@ -19,9 +19,7 @@
 				</a>
 				<div>
 					<!--Modifier-->
-					<form method="post" action="">
-						<button type="button" class="buttonEdit"><i class="fas fa-pencil-alt"></i></button>
-					</form>
+					<a href="editbillets"><button type="button" class="buttonEdit"><i class="fas fa-pencil-alt"></i></button></a>
 					<!--Supprimer-->
 					<form method="post" action="admin/supprimer">
 						<button type="button" class="buttonDelete"><i class="fas fa-times"></i></button>
