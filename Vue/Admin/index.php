@@ -19,10 +19,14 @@
 				</a>
 				<div id="editChap">
 					<!--Modifier-->
-					<a href="editbillets"><button type="button" class="buttonEdit"><i class="fas fa-pencil-alt"></i></button></a>
+					<form method="post" action="">
+						<input type="hidden" name="id" value="<?= $billet['id'] ?>" />
+						<button type="submit" class="buttonEdit"><i class="fas fa-pencil-alt"></i></button>
+					</form>
 					<!--Supprimer-->
 					<form method="post" action="admin/supprimer">
-						<button type="button" class="buttonDelete"><i class="fas fa-times"></i></button>
+						<input type="hidden" name="id" value="<?= $billet['id'] ?>" />
+						<button type="submit" class="buttonDelete"><i class="fas fa-times"></i></button>
 					</form>	
 				</div>
 			</div>
