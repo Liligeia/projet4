@@ -17,7 +17,7 @@
 				<a href="<?= "billet/index/" . $this->nettoyer($billet['id']) ?>">
 					<h4 class="titreBillet"><?= $this->nettoyer($billet['titre']) ?></h4>
 				</a>
-				<div>
+				<div id="editChap">
 					<!--Modifier-->
 					<a href="editbillets"><button type="button" class="buttonEdit"><i class="fas fa-pencil-alt"></i></button></a>
 					<!--Supprimer-->
