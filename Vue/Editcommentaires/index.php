@@ -30,8 +30,10 @@
 					<p><?= $this->nettoyer($commentaire['auteur']) ?></p>
 				</a>
 				<p><?= $this->nettoyer($commentaire['contenu']) ?></p>
-				<form method="post" action="admin/supprimer">
-					<button type="button" class="buttonEdit" ><i class="fas fa-times"></i></button>
+				<!--Supprimer-->
+				<form method="post" action="editcommentaires/supprimer">
+					<input type="hidden" name="id" value="<?= $commentaire['id'] ?>" />
+					<button type="submit" class="buttonDelete" ><i class="fas fa-times"></i></button>
 				</form>	
 			</div>
         </header>
