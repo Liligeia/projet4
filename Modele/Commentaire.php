@@ -33,6 +33,11 @@ class Commentaire extends Modele {
         $date = date('Y-m-d H:i:s');
         $this->executerRequete($sql, array($date, $auteur, $contenu, $idBillet));
     }
+	
+	public function supprimerCommentaire($idCommentaire){
+		$sql = 'delete from T_COMMENTAIRE where COM_ID=?';
+		$this->executerRequete($sql, array($idCommentaire));
+	}
     
     /**
      * Renvoie le nombre total de commentaires
