@@ -36,6 +36,19 @@ a{
 h1 {
     color: #2c2c2c;
 }
+h3{
+	text-decoration: underline;
+}
+
+button{
+	cursor: pointer;
+}
+.buttonsub{
+	background: 87a4b9;
+	margin: 15px;
+	padding: 3px;
+    border-radius: 4px;
+}
 
               /*********/
              /* Header*/
@@ -151,6 +164,32 @@ time{
 	text-align: center;
 	margin: 12%;
 }
+/**** Bouttons ****/
+#menuAdmin{
+	text-align: center;
+}
+.buttonMenu{
+	background: white;
+	border-bottom: none;
+	font-size: 20px;
+}
+/**** Modification chapitres ****/
+.liste{
+	display: flex;
+    justify-content: space-between;
+}
+
+.buttonEdit{
+	background: none;
+	border: none;
+	color: #5b7e97;
+}
+.buttonDelete{
+	background: none;
+	border: none;
+	color: #ff0000;
+}
+
 
 /**** Création de chapitres ****/
 #formChap{
@@ -162,11 +201,6 @@ time{
 }
 div.tox.tox-tinymce{
 	margin: 15px;
-}
-#submitChap{
-	margin: 15px;
-	background: #dcdcdc;
-    border-radius: 4px;
 }
 
               /**********/
