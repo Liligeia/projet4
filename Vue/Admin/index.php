@@ -19,7 +19,7 @@
 				</a>
 				<div id="editChap">
 					<!--Modifier-->
-					<form method="post" action="">
+					<form method="post" action="editbillets">
 						<input type="hidden" name="id" value="<?= $billet['id'] ?>" />
 						<button type="submit" class="buttonEdit"><i class="fas fa-pencil-alt"></i></button>
 					</form>
