@@ -47,6 +47,14 @@ class Billet extends Modele {
 		$this->executerRequete($sql, array($idBillet));
 	}
 	
+	/*Update un billet dans la BD*/
+	public function updateBillet($titre, $contenu, $idBillet){
+		$sql = ' update T_BILLET'
+				.' set BIL_TITRE=?, BIL_CONTENU=?'
+				.' where BIL_ID=?';
+		$this->executerRequete($sql, array($titre, $contenu, $idBillet));		
+	}
+	
     /**
      * Renvoie le nombre total de billets
      * 
