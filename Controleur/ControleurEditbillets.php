@@ -19,8 +19,23 @@ class ControleurEditbillets extends ControleurSecurise
     }
     public function index()
     {
-    $billets = $this->billet->getBillets();
-    $this->genererVue(array('billets' => $billets));
+	$idBillet = $this->requete->getParametre("id");
+        
+    $billet = $this->billet->getBillet($idBillet);
+	
+    $this->genererVue(array('billet' => $billet));
     }
 	
+	//Modifie un billet et renvoi vers l'admin
+	public function update(){
+		$titre = $this->requete->getParametre("titre");
+		$contenu = $this->requete->getParametre("contenu");
+		$idBillet = $this->requete->getParametre("id");
+	  
+		$this->billet->updateBillet($titre, $contenu, $idBillet);
+	  
+		$this->rediriger("admin");
+		
+	}
+
 }
