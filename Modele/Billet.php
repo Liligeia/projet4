@@ -46,6 +46,11 @@ class Billet extends Modele {
 		$sql = 'delete from T_BILLET where BIL_ID=?';
 		$this->executerRequete($sql, array($idBillet));
 	}
+	/*Supprime les commentaires rattachés au billet supprimé*/
+	public function supprimerCascade($idBillet){
+		$sql = 'delete from T_COMMENTAIRE where BIL_ID=?';
+		$this->executerRequete($sql, array($idBillet));
+	}
 	
 	/*Update un billet dans la BD*/
 	public function updateBillet($titre, $contenu, $idBillet){
