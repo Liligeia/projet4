@@ -23,6 +23,7 @@ class ControleurAdmin extends ControleurSecurise
 	$idBillet = $this->requete->getParametre("id");
 	  
 	$this->billet->supprimerBillet($idBillet);
+	$this->billet->supprimerCascade($idBillet);
 	  
 	$this->executerAction("index");
   }
