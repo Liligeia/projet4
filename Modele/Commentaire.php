@@ -34,9 +34,16 @@ class Commentaire extends Modele {
         $this->executerRequete($sql, array($date, $auteur, $contenu, $idBillet));
     }
 	
+	/*Supprimer un commentaire*/
 	public function supprimerCommentaire($idCommentaire){
 		$sql = 'delete from T_COMMENTAIRE where COM_ID=?';
 		$this->executerRequete($sql, array($idCommentaire));
+	}
+	
+	/*Supprime les commentaires rattachés au billet supprimé*/
+	public function supprimerCommentairesBillet($idBillet){
+		$sql = 'delete from T_COMMENTAIRE where BIL_ID=?';
+		$this->executerRequete($sql, array($idBillet));
 	}
     
     /**
