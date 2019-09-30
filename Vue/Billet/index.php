@@ -14,13 +14,16 @@
 <?php foreach ($commentaires as $commentaire): ?>
     <p><?= $this->nettoyer($commentaire['auteur']) ?> dit :</p>
     <p><?= $this->nettoyer($commentaire['contenu']) ?></p>
+	<form name="signalement" action="">
+		<input type="button" id="signaler" value="signaler le commentaire"/>
+	</form>
 <?php endforeach; ?>
 <hr />
-<form id="formCom" method="post" action="billet/commenter">
+<form id="formCom" name="formConf" method="post" action="billet/commenter">
     <input id="auteur" name="auteur" type="text" maxlength="20" placeholder="Votre pseudo" 
            required /><br />
     <textarea id="txtCommentaire" name="contenu" rows="4" 
               maxlength="280" placeholder="Votre commentaire" required></textarea><br />
     <input type="hidden" name="id" value="<?= $billet['id'] ?>" />
-    <input id="submitCom" type="submit" value="Commenter" />
+    <input id="submitCom" class="confirm" type="button" value="Commenter" />
 </form>
