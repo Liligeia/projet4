@@ -31,9 +31,9 @@
 				</a>
 				<p><?= $this->nettoyer($commentaire['contenu']) ?></p>
 				<!--Supprimer-->
-				<form method="post" action="editcommentaires/supprimer">
+				<form method="post" id="<?= $commentaire['id'] ?>" action="editcommentaires/supprimer">
 					<input type="hidden" name="id" value="<?= $commentaire['id'] ?>" />
-					<button type="submit" class="buttonDelete" ><i class="fas fa-times"></i></button>
+					<button type="button" name="<?= $commentaire['id'] ?>" class="buttonDelete delete" ><i class="fas fa-times"></i></button>
 				</form>	
 			</div>
         </header>
