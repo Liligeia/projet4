@@ -30,8 +30,7 @@ class ControleurNewbillet extends ControleurSecurise {
 	  
 	  $this->billet->ajouterBillet($titre, $contenu);
 	  
-	  // Exécution de l'action par défaut pour actualiser la liste des billets
-	  $this->executerAction("index");
+	  $this->rediriger("admin");
     }	
 
 }
