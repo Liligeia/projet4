@@ -52,5 +52,18 @@
 		</div>
       </footer>
     </div>
+	
+	
+<!-- SCRIPT -->
+            
+    <!--jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    
+	<!-- JavaScript -->
+    <script src="JS/main.js"></script>
+    <script src="JS/confirme.js"></script>
+	<script src="JS/supprime.js"></script>
+	
+	
   </body>
 </html>
