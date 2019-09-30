@@ -24,9 +24,9 @@
 						<button type="submit" class="buttonEdit"><i class="fas fa-pencil-alt"></i></button>
 					</form>
 					<!--Supprimer-->
-					<form method="post" action="admin/supprimer">
+					<form method="post" id="<?= $billet['id'] ?>" name="formSupp" action="admin/supprimer">
 						<input type="hidden" name="id" value="<?= $billet['id'] ?>" />
-						<button type="submit" class="buttonDelete"><i class="fas fa-times"></i></button>
+						<button type="button" name="<?= $billet['id'] ?>" class="buttonDelete delete"><i class="fas fa-times"></i></button>
 					</form>	
 				</div>
 			</div>
