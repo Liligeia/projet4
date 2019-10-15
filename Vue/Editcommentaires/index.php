@@ -29,14 +29,14 @@ if ($commentaire['flag']== 1 ):
 				<p><?= $this->nettoyer($commentaire['contenu']) ?></p>
 				<div id="editChap">
 				<!--Sauvegarder-->
-				<form method="post" id="<?= $commentaire['id'] ?>" action="editcommentaires/save">
+				<form method="post" class ="<?= $commentaire['id'] ?> sauvegarde" action="editcommentaires/save">
 					<input type="hidden" name="id" value="<?= $commentaire['id'] ?>" />
-					<button type="submit" name="<?= $commentaire['id'] ?>" class="buttonCheck confirm"><i class="fas fa-check"></i></button>
+					<button type="button" name="<?= $commentaire['id'] ?>" class="buttonCheck save"><i class="fas fa-check"></i></button>
 				</form>
 				<!--Supprimer-->
-				<form method="post" id="<?= $commentaire['id'] ?>" action="editcommentaires/supprimer">
+				<form method="post" class ="<?= $commentaire['id'] ?> supprimeCom" action="editcommentaires/supprimer">
 					<input type="hidden" name="id" value="<?= $commentaire['id'] ?>" />
-					<button type="button" name="<?= $commentaire['id'] ?>" class="buttonDelete delete" ><i class="fas fa-times"></i></button>
+					<button type="button" name="<?= $commentaire['id'] ?>" class="buttonDelete deleteCom" ><i class="fas fa-times"></i></button>
 				</form>	
 				</div>
 			</div>
@@ -67,10 +67,10 @@ if ($commentaire['flag']== 0 ):
 				</a>
 				<p><?= $this->nettoyer($commentaire['contenu']) ?></p>
 				<!--Supprimer-->
-				<form method="post" id="<?= $commentaire['id'] ?>" action="editcommentaires/supprimer">
+				<form method="post" class ="<?= $commentaire['id'] ?> supprimeCom" action="editcommentaires/supprimer">
 					<input type="hidden" name="id" value="<?= $commentaire['id'] ?>" />
-					<button type="button" name="<?= $commentaire['id'] ?>" class="buttonDelete delete" ><i class="fas fa-times"></i></button>
-				</form>	
+					<button type="button" name="<?= $commentaire['id'] ?>" class="buttonDelete deleteCom" ><i class="fas fa-times"></i></button>
+				</form>		
 			</div>
         </header>
     </article>
