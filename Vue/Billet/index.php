@@ -5,7 +5,7 @@
         <h1 class="titreBillet"><?= $this->nettoyer($billet['titre']) ?></h1>
         <time><?= $this->nettoyer($billet['date']) ?></time>
     </header>
-    <p><?= $this->nettoyer($billet['contenu']) ?></p>
+    <p><?=$billet['contenu']?></p>
 </article>
 <hr />
 <header>
@@ -13,9 +13,12 @@
 </header>
 <?php foreach ($commentaires as $commentaire): ?>
     <p><?= $this->nettoyer($commentaire['auteur']) ?> dit :</p>
-    <p><?= $this->nettoyer($commentaire['contenu']) ?></p>
-	<form name="signalement" action="">
-		<input type="button" id="signaler" value="signaler le commentaire"/>
+    <p><?= nl2br($this->nettoyer($commentaire['contenu'])) ?></p>
+	<!--Signaler-->
+	<form method="post" id="<?= $commentaire['id'] ?>" action="billet/signaler">
+		<input type="hidden" name="idCommentaire" value="<?= $commentaire['id'] ?>" />
+		<input type="hidden" name="id" value="<?= $billet['id'] ?>" />
+		<input type="submit" class="buttonSignal confirm" name="<?= $commentaire['id'] ?>" value="signaler le commentaire"/>
 	</form>
 <?php endforeach; ?>
 <hr />
