@@ -30,6 +30,7 @@ var App = function(){
 	_self.supprime = null;
 	_self.supprimeCommentaire = null;
 	_self.sauvegarde = null;
+	_self.signalement = null;
 	
 
     /**
@@ -48,6 +49,9 @@ var App = function(){
 		
 		_self.sauvegarde = new Sauvegarde();
 		_self.sauvegarde.init();
+		
+		_self.signalement = new Signalement();
+		_self.signalement.init();
 
     };
 
