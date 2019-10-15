@@ -155,6 +155,17 @@ time{
 	border-radius: 4px;
 	margin-top: 10px;
 }
+
+.buttonSignal{
+	background: none;
+    border: none;
+    font-style: italic;	
+	color: #572d2d;
+	text-decoration: underline #572d2d;
+	cursor: pointer
+}
+
+
               /********/
              /* Admin*/
             /********/
@@ -192,6 +203,11 @@ time{
 	background: none;
 	border: none;
 	color: #ff0000;
+}
+.buttonCheck{
+	background: none;
+	border: none;
+	color: #46d613;
 }
 
 
