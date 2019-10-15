@@ -11,7 +11,41 @@
 
 <h3>Listes des commentaires signalés:</h3>
 
-<p>Aucun commentaire n'a été signalé</p>
+<div class="liste">
+	<h4>Nom</h4>
+	<h4>Commentaire</h4>
+	<h4></h4>
+</div>
+
+<?php foreach ($commentaires[1] as $commentaire):
+if ($commentaire['flag']== 1 ):
+	?>
+<article>
+        <header>
+			<div class="liste">
+				<a href="<?= "editcommentaires/index/" . $this->nettoyer($commentaire['id']) ?>">
+					<p><?= $this->nettoyer($commentaire['auteur']) ?></p>
+				</a>
+				<p><?= $this->nettoyer($commentaire['contenu']) ?></p>
+				<div id="editChap">
+				<!--Sauvegarder-->
+				<form method="post" id="<?= $commentaire['id'] ?>" action="editcommentaires/save">
+					<input type="hidden" name="id" value="<?= $commentaire['id'] ?>" />
+					<button type="submit" name="<?= $commentaire['id'] ?>" class="buttonCheck confirm"><i class="fas fa-check"></i></button>
+				</form>
+				<!--Supprimer-->
+				<form method="post" id="<?= $commentaire['id'] ?>" action="editcommentaires/supprimer">
+					<input type="hidden" name="id" value="<?= $commentaire['id'] ?>" />
+					<button type="button" name="<?= $commentaire['id'] ?>" class="buttonDelete delete" ><i class="fas fa-times"></i></button>
+				</form>	
+				</div>
+			</div>
+        </header>
+    </article>
+    <hr />
+<?php endif; 
+endforeach; ?>
+
 
 <h3>Listes des commentaires :</h3>
 
@@ -21,7 +55,9 @@
 	<h4></h4>
 </div>
 
-<?php foreach ($commentaires as $commentaire):
+<?php
+foreach ($commentaires[0] as $commentaire):
+if ($commentaire['flag']== 0 ):
     ?>
     <article>
         <header>
@@ -39,4 +75,5 @@
         </header>
     </article>
     <hr />
-<?php endforeach; ?>
+<?php endif; 
+endforeach; ?>
