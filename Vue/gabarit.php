@@ -63,6 +63,9 @@
     <script src="JS/main.js"></script>
     <script src="JS/confirme.js"></script>
 	<script src="JS/supprime.js"></script>
+	<script src="JS/supprimeCommentaire.js"></script>
+	<script src="JS/sauvegarde.js"></script>
+	<script src="JS/signalement.js"></script>
 	
 	
   </body>
