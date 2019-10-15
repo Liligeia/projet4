@@ -36,4 +36,18 @@ class ControleurBillet extends Controleur {
     // Exécution de l'action par défaut pour actualiser la liste des billets
     $this->executerAction("index");
   }
+  
+  
+  public function signaler(){
+	 
+	 $idCommentaire = $this->requete->getParametre("idCommentaire");
+	 
+	 $this->commentaire->signalerCommentaire($idCommentaire);
+	 
+	 $this->executerAction("index");
+	 
+	 
+  }
+  
+  
 }
