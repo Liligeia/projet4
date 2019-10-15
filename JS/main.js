@@ -24,10 +24,13 @@ var App = function(){
      * @private
      */
     var _self = this;
-	var _self = this;
 
 
     _self.confirme = null;
+	_self.supprime = null;
+	_self.supprimeCommentaire = null;
+	_self.sauvegarde = null;
+	
 
     /**
      * Initialise et crée les fonctions
@@ -39,6 +42,12 @@ var App = function(){
 		
 		_self.supprime = new Supprime();
 		_self.supprime.init();
+		
+		_self.supprimeCommentaire = new SupprimeCommentaire();
+		_self.supprimeCommentaire.init();
+		
+		_self.sauvegarde = new Sauvegarde();
+		_self.sauvegarde.init();
 
     };
 
