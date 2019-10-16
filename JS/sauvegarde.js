@@ -18,7 +18,6 @@ var Sauvegarde = function () {
         var subSave = document.getElementsByClassName("save");
 		for (var i = 0; i < subSave.length; i++){
 			subSave[i].addEventListener('click',  _self.sauvegarder);
-			console.log("erreur sauvegarde event");
 		};
     };
 	
