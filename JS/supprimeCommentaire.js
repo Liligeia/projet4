@@ -18,7 +18,6 @@ var SupprimeCommentaire = function () {
         var subSupp = document.getElementsByClassName("deleteCom");
 		for (var i = 0; i < subSupp.length; i++){
 			subSupp[i].addEventListener('click',  _self.supprimerCommentaire);
-			console.log("erreur supprimer event");
 		};
     };
 	
