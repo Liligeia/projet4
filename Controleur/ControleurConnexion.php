@@ -18,7 +18,7 @@ class ControleurConnexion extends Controleur
     }
     
 	//Vérifie le mot de passe hashé dans la BDD avec le password_verify
-	public function verify($login, $mdp){
+	private function verify($login, $mdp){
 		$contenuRequete = $this->utilisateur->getUserPassword($login);
 		$resultat = false;
 			if ($contenuRequete && password_verify($mdp,$contenuRequete['UTIL_MDP'])){
@@ -58,6 +58,6 @@ class ControleurConnexion extends Controleur
     public function deconnecter()
     {
         $this->requete->getSession()->detruire();
-        $this->rediriger("accueil");
+        $this->rediriger("admin");
     }
 }
