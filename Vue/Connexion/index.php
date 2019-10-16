@@ -1,6 +1,11 @@
 <?php $this->titre = "Mon Blog - Connexion" ?>
 
-<p>Vous devez être connecté pour accéder à cette zone.</p>
+<div class="msgErreur">
+<?php if (isset($msgErreur)): ?>
+    <p><?= $msgErreur ?></p>
+<?php endif; ?>
+</div>
+
 
 <form id="formConnect" action="connexion/connecter" method="post">
     <input name="login" type="text" placeholder="Entrez votre login" required autofocus>
@@ -8,6 +13,3 @@
     <button id="submitConnect" type="submit">Connexion</button>
 </form>
 
-<?php if (isset($msgErreur)): ?>
-    <p><?= $msgErreur ?></p>
-<?php endif; ?>
