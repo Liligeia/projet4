@@ -4,7 +4,7 @@
 			<figure>
             <img src="Images/slide.jpg" alt="Slide"/>
 				<figcaption>                
-                <h2>Billet simple pour l'Alaska</h2>
+                <h2 id="titre">Billet simple pour l'Alaska</h2>
 				</figcaption>
 			</figure> 
 		</div>
@@ -19,7 +19,7 @@
             </a>
             <time><?= $this->nettoyer($billet['date']) ?></time>
         </header>
-        <p><?= $this->nettoyer($billet['contenu']) ?></p>
+        <p><?= $billet['contenu'] ?></p>
     </article>
     <hr />
 <?php endforeach; ?>
