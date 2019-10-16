@@ -22,6 +22,8 @@ class ControleurAdmin extends ControleurSecurise
     $this->genererVue(array('billets' => $billets));
   }
   
+  
+  
   //Supprime le billet avec les commentaires qui y sont attachés
   public function supprimer(){
 	$idBillet = $this->requete->getParametre("id");
