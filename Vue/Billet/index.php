@@ -15,10 +15,10 @@
     <p><?= $this->nettoyer($commentaire['auteur']) ?> dit :</p>
     <p><?= nl2br($this->nettoyer($commentaire['contenu'])) ?></p>
 	<!--Signaler-->
-	<form method="post" id="<?= $commentaire['id'] ?>" action="billet/signaler">
+	<form method="post" class="<?= $commentaire['id'] ?> signaler" action="billet/signaler">
 		<input type="hidden" name="idCommentaire" value="<?= $commentaire['id'] ?>" />
 		<input type="hidden" name="id" value="<?= $billet['id'] ?>" />
-		<input type="submit" class="buttonSignal confirm" name="<?= $commentaire['id'] ?>" value="signaler le commentaire"/>
+		<input type="submit" class="buttonSignal signal" name="<?= $commentaire['id'] ?>" value="signaler le commentaire"/>
 	</form>
 <?php endforeach; ?>
 <hr />
