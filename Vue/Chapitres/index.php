@@ -4,7 +4,7 @@
 			<figure>
             <img src="Images/slide.jpg" alt="Slide"/>
 				<figcaption>                
-                <h2>Billet simple pour l'Alaska</h2>
+                <h2  id="titre">Billet simple pour l'Alaska</h2>
 				</figcaption>
 			</figure> 
 		</div>
