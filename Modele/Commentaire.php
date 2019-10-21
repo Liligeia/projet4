@@ -35,7 +35,6 @@ class Commentaire extends Modele {
 		
         return $commentaires;
 		
-		
 	}
 	
 	/*Ajoute un commentaire */
