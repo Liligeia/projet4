@@ -12,7 +12,7 @@ create table T_BILLET (
   BIL_ID integer primary key auto_increment,
   BIL_DATE datetime not null,
   BIL_TITRE varchar(100) not null,
-  BIL_CONTENU varchar(400) not null
+  BIL_CONTENU varchar(3000) not null
 ) ENGINE=INNODB CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 create table T_COMMENTAIRE (
