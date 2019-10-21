@@ -14,7 +14,7 @@
 	<script type="text/javascript">
 		tinymce.init({
 		selector: '#mytextarea',
-		valid_elements : "em/i,strike,u,strong/b,div[align],br",
+		valid_elements: "*[*]",
 		
 		});
 	</script>
@@ -54,13 +54,25 @@
 	  
 	<!-- Footer -->
       <footer id="piedBlog">
+	 <!--
         <ul id="socialmedia">
 			<li><a class="socialicons" href= "https//www.facebook.com"><i class="icon-social-facebook"></i></a></li>
 			<li><a class="socialicons" href= "https//www.twitter.com"><i class="icon-social-twitter"></i></a></li>
 			<li><a class="socialicons" href= "https//www.instagram.com"><i class="icon-social-instagram"></i></a></li>
 		</ul>
-		<a id="connexion" href="connexion">Admin</a>
-		<a id="lienDeco" href="connexion/deconnecter">Se déconnecter</a>
+	-->
+		
+			<?php if(isset($_SESSION['login'])) :?>
+				<a id="admin" href="admin">Admin </a>
+				<?php else : ?> 
+				<a id="connexion" href="connexion">Connexion</a>
+				<?php endif; ?>
+			
+		<?php if(isset($_SESSION['login'])) : ?>
+			<a id="lienDeco" href="connexion/deconnecter">Se déconnecter</a>
+		<?php endif; ?>
+		
+		
       </footer>
     </div>
 	
