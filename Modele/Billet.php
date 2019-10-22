@@ -16,6 +16,15 @@ class Billet extends Modele {
         $billets = $this->executerRequete($sql);
         return $billets;
     }
+	
+	public function getThreeBillets() {
+        $sql = 'select BIL_ID as id, BIL_DATE as date,'
+                . ' BIL_TITRE as titre, BIL_CONTENU as contenu from T_BILLET'
+                . ' order by BIL_ID desc'
+				. ' limit 3';
+        $threeBillets = $this->executerRequete($sql);
+        return $threeBillets;
+    }
     /** Renvoie les informations sur un billet
      * 
      * @param int $id L'identifiant du billet
