@@ -10,9 +10,9 @@
 		</div>
 
 
-<?php foreach ($billets as $billet):
+<?php foreach ($threeBillets as $billet):
     ?>
-    <article>
+    <article class="ellipsis">
         <header>
             <a href="<?= "billet/index/" . $this->nettoyer($billet['id']) ?>">
                 <h1 class="titreBillet"><?= $this->nettoyer($billet['titre']) ?></h1>
