@@ -54,13 +54,6 @@
 	  
 	<!-- Footer -->
       <footer id="piedBlog">
-	 <!--
-        <ul id="socialmedia">
-			<li><a class="socialicons" href= "https//www.facebook.com"><i class="icon-social-facebook"></i></a></li>
-			<li><a class="socialicons" href= "https//www.twitter.com"><i class="icon-social-twitter"></i></a></li>
-			<li><a class="socialicons" href= "https//www.instagram.com"><i class="icon-social-instagram"></i></a></li>
-		</ul>
-	-->
 		
 			<?php if(isset($_SESSION['login'])) :?>
 				<a id="admin" href="admin">Admin </a>
