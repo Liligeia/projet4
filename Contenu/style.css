@@ -49,6 +49,15 @@ button{
 	cursor: pointer;
 }
 
+.ellipsis p:nth-child(3){
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.ellipsis p:nth-child(n+4){
+	display: none;
+}
+
               /*********/
              /* Header*/
             /*********/
@@ -99,28 +108,13 @@ button{
 
               /*********/
              /* Footer*/
-            /*********/
+            /********)*/
 #piedBlog{
 	margin-top: 10%;
 }
 
-#socialmedia{
-display: flex;
-flex-direction: row;
-justify-content: center;
-list-style-type: none;
-margin: 0;
-padding: 0;
-}
-
-#socialmedia li{
-	width: auto;
-	margin: 0;
-	padding: 0 10px;
-}
-
-#connexion{
-	margin: 3%;
+#piedBlog a{
+	margin: 12px;
 }
 
               /***********/
