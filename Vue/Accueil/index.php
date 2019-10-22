@@ -9,6 +9,7 @@
 			</figure> 
 		</div>
 
+<h3>Derniers chapitres : </h3>
 
 <?php foreach ($threeBillets as $billet):
     ?>
