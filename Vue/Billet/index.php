@@ -18,7 +18,7 @@
 	<form method="post" class="<?= $commentaire['id'] ?> signaler" action="billet/signaler">
 		<input type="hidden" name="idCommentaire" value="<?= $commentaire['id'] ?>" />
 		<input type="hidden" name="id" value="<?= $billet['id'] ?>" />
-		<input type="submit" class="buttonSignal signal" name="<?= $commentaire['id'] ?>" value="signaler le commentaire"/>
+		<input type="button" class="buttonSignal signal" name="<?= $commentaire['id'] ?>" value="signaler le commentaire"/>
 	</form>
 <?php endforeach; ?>
 <hr />
